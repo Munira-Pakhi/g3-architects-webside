@@ -108,6 +108,15 @@ main {
 }
 
 /* facts section */
+.section-title {
+  margin-top: 50px;
+}
+.facts .facts-description {
+  font-weight: 400;
+  height: 30px;
+  width: 500px;
+  margin-bottom: 60px;
+}
 .facts-card-container {
   display: flex;
   justify-content: space-around;
@@ -122,47 +131,101 @@ main {
   font-weight: 600;
   font-size: 1.25rem;
 }
-.facts-card-container .card-stats{
- font-size: 2.8rem;
- color: #424242;
- margin-top: 10px;
+.facts-card-container .card-stats {
+  font-size: 2.8rem;
+  color: #424242;
+  margin-top: 10px;
 }
+
+/* sponsors style */
+.sponsors {
+  text-align: center;
+}
+.sponsors-img-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+.sponsors-text{
+  width: 500px;
+ margin-left: 370px;
+}
+
 /* responsive media queries */
 /* mobile devices */
 @media screen and (max-width: 576px) {
   header {
-    padding: 20px;
+    padding: 50px;
   }
   nav,
-  .teams-container {
+  .teams-container,
+  .facts-card-container,
+  .sponsors-img-container {
     flex-direction: column;
   }
 
   .teams-img-container {
     grid-template-columns: 1fr;
   }
-  .teams-content {
-    margin-right: 50px;
+  .teams-content, .facts-card-container  {
+   padding-right: 20px;
+    padding-left: 20px;
+  }
+  .teams-title {
     margin-top: 20px;
   }
-  /* .nav > ul, .nav-title {
-    margin: 20px;
-  } */
+  .facts .facts-description {
+    width: auto;
+  }
+  .facts-card-container {
+    gap: 20px;
+  }
+  .section-title, .facts-description{
+    margin-left: 10px;
+  }
+  .sponsors-img-container {
+    width: 165px;
+    margin-left: 100px;
+  }
+  .sponsors-text{
+    margin-left: auto;
+    width: auto;
+  }
 }
 
 /* tablet or medium devices */
 @media screen and (min-width: 576px) and (max-width: 960px) {
   header {
-    padding: 50px;
+    padding: 20px;
   }
   nav,
-  .teams-container {
+  .teams-container,
+  .facts-card-container,
+  .sponsors-img-container
+   {
     flex-direction: column;
   }
   .teams-content {
     margin-top: 20px;
   }
-  /* .nav > ul, .nav-title {
-    margin: 20px;
-  } */
+  .facts-card-container {
+    gap: 20px;
+  }
+  .section-title, .facts-description{
+    margin-left: 10px;
+  }
+  .facts-card-container{
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .sponsors-img-container {
+    width: 165px;
+    margin-left: 250px;
+  }
+  .sponsors-text{
+    margin-left: auto;
+    width: auto;
+  }
+  
 }
